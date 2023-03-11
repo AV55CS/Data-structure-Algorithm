@@ -1,0 +1,14 @@
+
+Binary search Algorithm :
+
+    1. Find the middle element of the list. 
+    2. If it matches queried number, return the middle position as the answer. 
+    3. If it is less than the queried number, then search the first half of the list 
+    4. If it is greater than the queried number, then search the second half of the list 
+    5. If no more elements remain, return -1. 
+    
+    
+ time complexity  of binary search =O(log N). 
+ space complexity of binary search =O(1)
+ 
+ This fact is often stated as: binary search runs in logarithmic time. 
