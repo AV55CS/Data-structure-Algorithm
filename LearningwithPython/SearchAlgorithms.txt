@@ -1,1 +1,28 @@
 
+ALGORITHM
+An algorithm is simply a list of statements which can be converted into code and executed by a computer on different sets of inputs. 
+
+Edge Cases: 
+Some of these (like the empty array or query not found) are called edge cases, as they represent rare or extreme examples.
+While edge cases may not occur frequently, our programs should be able to handle all edge cases, otherwise it  may fail in unexpected ways. 
+
+Linear search algorithm
+It involves searching through a list in a linear fashion i.e. element after element.
+Time complexity =O(n)
+
+Binary search algorithm:
+It involves searching through the half of list everytime  using two pointers left and right with appropriate conditions.
+It works for sorted  list.
+
+Time and Space complexity:
+
+1. The time complexity of the algorithm is cN for some fixed constant c that depends on the number of operations we perform in each iteration and the time taken to execute a statement. Time complexity is sometimes also called the running time of the algorithm.
+
+2. The space complexity is some constant c' (independent of N), since we just need a single variable position to iterate through the array, and it occupies a constant space in the computer's memory (RAM).
+
+Asymtotic Notation:
+
+Big O Notation: Worst-case complexity is often expressed using the Big O notation. In the Big O, we drop fixed constants and lower powers of variables to capture the trend of relationship between the size of the input and the complexity of the algorithm.
+
+i.e. if the complexity of the algorithm is cN^3 + dN^2 + eN + f,in the Big O notation it is expressed as O(N^3)
+
