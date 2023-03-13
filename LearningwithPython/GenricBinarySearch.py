@@ -1,3 +1,11 @@
+'''
+lo:lower index of array
+hi:end index of arrray
+array:sorted list of unique numbers 
+condition:function return  strings indicating  whether the query is 'found', or can be found at 'left' side or 'right' side
+'''
+
+
 def binary_search(array,query):
     def condition(mid):
         if array[mid] == query:
