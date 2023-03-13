@@ -3,6 +3,10 @@ Given an array of integers nums sorted in ascending order, find the starting and
  nums:    sorted list of numbers(reapeating values are allowed)
  target : the value whose position to be searched 
  Note: we have written separate condition function for both the functions in order to use our generic binary search function
+ 
+ time complexity:=O(logn)
+ since there is no extra space taken or data structure we have used therefore :
+ space complexity=O(1)
 
 '''
 def first_position(nums, target):
