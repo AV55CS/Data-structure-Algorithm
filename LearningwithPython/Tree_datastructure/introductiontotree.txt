@@ -1,1 +1,79 @@
+Tree:
+It's called a tree because it vaguely like an inverted tree trunk with branches. 
+    • The word "binary" indicates that each "node" in the tree can have at most 2 children (left or right). 
+    • Nodes can have 0, 1 or 2 children. Nodes that do not have any children are sometimes also called "leaves". 
+    • The single node at the top is called the "root" node, and it typically where operations like search, insertion etc. begin.
+    (To do any kind of operation we always pass root of the tree )
+    
+For our use case, we require the binary tree to have some additional properties:
+1.Keys and Values: Each node of the tree stores a key (a username) and a value (a User object).A binary tree where nodes have both a key and a value is 
+  often referred to as a map or tree map (because it maps keys to values). 
+  
+2.Binary Search Tree: The left sub-tree of any node only contains nodes with keys that are lexicographically smaller than the node's key,
+  and the right sub-tree of any node only contains nodes with keys that lexicographically larger than the node's key. A tree that satisfies this property 
+  is called a binary search trees, and it's easy to locate a specific key by traversing a single path down from the root note. 
+  
+3.Balanced Tree: The tree is balanced i.e. it does not skew too heavily to one side or the other. The left and right sub-trees of any node shouldn't differ
+  in height/depth by more than 1 level.
+  
+Tuple representation:
+ tuple with the structure ( left_sub-tree, key, right_sub-tree) (where left_sub-tree and right_sub-tree are themselves tuples) .
+ eg.tree_tuple = ((1,3,None), 2, ((None, 3, 4), 5, (6, 7, 8))
+ 
+ Traversal
+ A traversal refers to the process of visiting each node of a tree exactly once. Visiting a node generally refers to adding the node's key to a list. 
+ There are three ways to traverse a binary tree and return the list of visited keys: 
+Inorder traversal											
+    1. Traverse the left subtree recursively inorder. 
+    2. Traverse the current node. 
+    3. Traverse the right subtree recursively inorder. 
+Preorder traversal
+    1. Traverse the current node. 
+    2. Traverse the left subtree recursively preorder. 
+    3. Traverse the right subtree recursively preorder. 
+Postorder traversal
+    1. Traverse the left subtree recursively postorder. 
+    2. Traverse the right subtree recursively postorder. 
+    3. Traverse the current node. 
+    
+For unique construction of binary tree (preorder,inorder) or( postorder,inorder) traversal required.
+
+Useful Logic
+
+Height: The longest path from root of the tree to leaf 
+Level=Height +1
+size =Total number of nodes in the tree
+Leaf node=Tree node with no left and right child
+Non leaf node=Tree node with child
+
+
+Binary Search Tree (BST)
+A binary search tree or BST is a binary tree that satisfies the following conditions:
+    1. The left subtree of any node only contains nodes with keys less than the node's key 
+    2. The right subtree of any node only contains nodes with keys greater than the node's key 
+It follows from the above conditions that every subtree of a binary search tree must also be a binary search tree.
+
+
+Self-Balancing Binary Trees and AVL Trees
+
+A self-balancing binary tree remains balanced after every insertion or deletion. Several decades of research has gone into creating self-balancing 
+binary trees, and many approaches have been devised e.g. B-trees, Red Black Trees and AVL (Adelson-Velsky Landis) trees.
+
+Self-balancing in AVL trees is achieved by tracking the balance factor (difference between the height of the left subtree and the right subtree) 
+for each node and rotating unbalanced subtrees along the path of insertion/deletion to balance them.
+In a balanced BST, the balance factor of each node is either 0, -1, or 1. When we perform an insertion, then the balance factor of certain nodes along 
+the path of insertion may change to 2 or -2. Those nodes can be "rotated" one-by-one to bring the balance factor back to 1, 0 or -1. 
+
+There are 4 different scenarios for balancing, two of which require a single rotation, while the others require 2 rotations:
+1.left-left rotation 
+2.left-right roatation
+3.right-right rotation
+4.right-left rotation
+
+Since each rotation takes constant time, and at most log N rotations may be required, this operation is far more efficient than creating a balanced binary 
+tree from scratch, allowing insertion and deletion to be performed in O (log N) time.
+
+Binary trees form the basis of many modern programming language features (e.g. maps in C++ and Java) and data storage systems 
+(file system indexes, relational databases like MySQL). we might think if dictionaries in Python are also binary search trees. 
+but they're not. They're hash tables, which is a different but equally interesting and important data structure. 
 
