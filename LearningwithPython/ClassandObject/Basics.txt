@@ -1,0 +1,62 @@
+Class:
+A Python class would be a great way to represent the information for a user. 
+A class is a blueprint for creating objects. Everything in Python is an object belonging to some class. 
+
+Constructor 
+A constructor is a special method in a class used to create and initialize an object of a class.
+A constructor is a unique function that gets called automatically when an object is created of a class. 
+The main purpose of a constructor is to initialize or assign values to the data members of that class. There are different types of constructors. 
+It cannot return any value other than none.
+
+Syntax of Python Constructor
+def  __init__(self):#initializations
+
+init is one of the reserved functions in Python. In Object Oriented Programming, it is known as a constructor.
+
+Example:
+class User:
+    def __init__(self, username, name, email):
+        self.username = username
+        self.name = name
+        self.email = email
+        
+user1 = User('Avi', 'Avi Sharma', 'avi@gmail.com')
+
+
+Here's what's happening above (conceptually):
+    • Python creates an empty object of the type User and stores in the variable user1
+    • Python then invokes the function User.___init__ with the arguments user1, "Avi", "Avi Sharma" and "avi@gmail.com" 
+    • As the __init__ function is executed, the properties username, name and email are set on the object user2 
+      We can access the properties of the object using the . Notation.
+	user2.name : john
+  
+      • SELF should be used when you define an instance method, as it’s passed automatically as the first parameter when the method is called.
+      • We should also use self in Python when referencing a class attribute from inside an instance method.
+      • SELF also comes in handy when we refer to instance methods from other instance methods.
+     
+  Nice object representation:
+  repr( ) method will be invoked automatically if we haven’t defined str( ) method in our class
+  These are some major differences:
+  1.These methods will be implemented by default for every class created.
+  2.str must return string object whereas repr can return any python expression.
+  3.If repr function is returning String representation of the object, we can skip implementation of str function.
+  4.If str function is missing then repr function is used as fallback. There is no fallback if repr function is missing.
+  
+  for eg.
+  class User:
+    def __init__(self, username, name, email):
+        self.username = username
+        self.name = name
+        self.email = email
+        
+    def __repr__(self):
+        return "User(username='{}', name='{}', email='{}')".format(self.username, self.name, self.email)
+    
+    def __str__(self):
+        return self.__repr__()
+        
+        
+user = User('jane', 'Jane Doe', 'jane@doe.com')
+user.introduce_yourself('David')
+#output:Hi David, I'm Jane Doe! Contact me at jane@doe.com .
+      
