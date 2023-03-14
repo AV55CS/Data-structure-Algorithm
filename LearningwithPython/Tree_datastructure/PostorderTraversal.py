@@ -29,10 +29,10 @@ def parse_tuple(data):
     else:
         node = TreeNode(data)#if single node (leaf)		
     return node	
-def traverse_pre_order(node):
+def traverse_post_order(node):
     if node is None: 
         return []
-    return([node.key] + traverse_pre_order(node.left) + traverse_pre_order(node.right))
+    return(traverse_post_order(node.left) + traverse_post_order(node.right)+ [node.key] )
 tree=parse_tuple(((1, 3, None), 2, ((None, 3, 4), 5, (6, 7, 8))))
-print(traverse_pre_order(tree))
-#Output:[2, 3, 1, 5, 3, 4, 7, 6, 8]
+print(traverse_post_order(tree))
+#Output:[1, 3, 4, 3, 6, 8, 7, 5, 2]
