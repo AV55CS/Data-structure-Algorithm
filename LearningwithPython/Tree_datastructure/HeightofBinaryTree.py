@@ -1,6 +1,12 @@
 '''
 Height: The longest path from root of the tree to leaf 
 
+TreeNode:class for creating and initialzing tree nodes
+height(node):take root as parameter and return the height of the binary tree.
+parse_tuple(data):reads tree tuple and returns root node of the created tree
+tree=root node of the created tree
+
+
 '''
 class TreeNode:  
   def __init__(self, key):
