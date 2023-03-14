@@ -1,5 +1,6 @@
 '''
 Implement a binary tree using Python, and show its usage with some examples.
+TreeNode:class for creating nodes of tree and intializing it.
 '''
 class TreeNode:
     def __init__(self, key):
