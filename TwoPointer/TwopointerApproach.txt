@@ -1,1 +1,13 @@
 
+Two Pointers Approach :
+
+This approach optimizes the runtime by utilizing some order (not necessarily sorting) of the data. This approach is generally used to search pairs in 
+  a sorted array. This approach works in constant space.
+ 
+1.Pointer Initialization — Starting points. Pointers can be at any place depending upon what we are trying to achieve. In  i.e. start of the linked list or   we have pointers at extreme ends one at starting index and another one at the last index.
+
+2.Pointer movement — This will decide how we converge toward the solution. Pointers can move in the same direction or they can move in the opposite           direction . we have different increments for the pointers .
+
+3.Stop condition — This decides when do we stop.  we continue till we reach a node whose next element is None. or we continue till our start is less than     the end (i <j).
+
+Note: Sliding window is another variant of two pointer approach.
