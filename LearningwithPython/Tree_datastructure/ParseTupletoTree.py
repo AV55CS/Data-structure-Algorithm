@@ -2,6 +2,9 @@
 data :tuple respresenation of tree
 
 parse_tuple(data):takes tuple represenation as input and returns root node of tree.ie converts tuple to tree
+The parse_tuple creates a new root node when a tuple of size 3 as an the input. Interestingly, to create the left and right subtrees for the node, 
+the parse_tuple function invokes itself. This technique is called recursion. The chain of recursive calls ends when parse_tuple encounters a number or None
+as input. 
 
 isinstance() returns:
 True :if the object is an instance or subclass of a class or any element of the tuple
