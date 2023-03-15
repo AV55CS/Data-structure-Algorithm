@@ -2,7 +2,12 @@
 We use the BST-property to perform insertion efficiently: 
     • Starting from the root node, we compare the key to be inserted with the current node's key 
     • If the key is smaller, we recursively insert it in the left subtree (if it exists) or attach it as as the left child if no left subtree exists. 
-    • If the key is larger, we recursively insert it in the right subtree (if it exists) or attach it as as the right child if no right subtree exists. 
+    • If the key is larger, we recursively insert it in the right subtree (if it exists) or attach it as as the right child if no right subtree exists.
+    
+    The length of the path traversed by insert is equal to the height of the tree (in the worst case). It follows that if the tree is balanced, 
+    the time complexity of insertion is O(log N) otherwise it is O(N).
+    
+    
 '''
 
 
