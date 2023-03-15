@@ -60,13 +60,5 @@ insert(tree, hemanth.username, hemanth)
 insert(tree, siddhant.username, siddhant)
 insert(tree, vishal.username, siddhant)
 
-tree2 = insert(None, aakash.username, aakash)
-insert(tree2, biraj.username, biraj)
-insert(tree2, hemanth.username, hemanth)
-insert(tree2, jadhesh.username, jadhesh)
-insert(tree2, siddhant.username, siddhant)
-insert(tree2, sonaksh.username, sonaksh)
-insert(tree2, vishal.username, vishal)
-
 print(tree.left.left.parent.key,tree.left.left.parent.value)
 #Output:biraj User(username='biraj', name='Biraj Das', email='biraj@example.com')
