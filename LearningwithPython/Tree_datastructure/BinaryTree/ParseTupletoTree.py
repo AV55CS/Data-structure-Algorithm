@@ -10,7 +10,12 @@ isinstance() returns:
 True :if the object is an instance or subclass of a class or any element of the tuple
 False: otherwise
 '''
-
+class TreeNode:  
+  def __init__(self, key):
+        self.key = key
+        self.left = None#left pointer 
+        self.right = None#right pointer
+        
 def parse_tuple(data):							
     if isinstance(data, tuple) and len(data) == 3:				
         node = TreeNode(data[1])#root
