@@ -63,8 +63,6 @@ def update(node, key, value):
         target.value = value
         
 
-
-
 tree = insert(None, jadhesh.username, jadhesh)
 insert(tree, biraj.username, biraj)
 insert(tree, sonaksh.username, sonaksh)
@@ -73,15 +71,6 @@ insert(tree, hemanth.username, hemanth)
 insert(tree, siddhant.username, siddhant)
 insert(tree, vishal.username, siddhant)
 
-tree2 = insert(None, aakash.username, aakash)
-insert(tree2, biraj.username, biraj)
-insert(tree2, hemanth.username, hemanth)
-insert(tree2, jadhesh.username, jadhesh)
-insert(tree2, siddhant.username, siddhant)
-insert(tree2, sonaksh.username, sonaksh)
-insert(tree2, vishal.username, vishal)
-node = find(tree, 'hemanth')
-print(node.key, node.value)
 #Output:('hemanth', User(username='hemanth', name='Hemanth Jain', email='hemanth@example.com'))
 update(tree, 'hemanth', User('hemanthk', 'Hemanth Kumar', 'hemanthk@example.com'))
 node = find(tree, 'hemanth')#checking the updated node
