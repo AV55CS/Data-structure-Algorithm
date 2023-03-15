@@ -3,6 +3,8 @@ Recursive strategy:
     1. Ensure that the left subtree is balanced. 
     2. Ensure that the right subtree is balanced. 
     3. Ensure that the difference between heights of left subtree and right subtree is not more than 1.
+    
+TreeNode:class for creating and initialzing tree nodes
 '''
 class TreeNode:  
   def __init__(self, key):
