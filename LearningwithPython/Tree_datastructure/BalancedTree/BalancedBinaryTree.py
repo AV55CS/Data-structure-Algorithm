@@ -27,7 +27,7 @@ def is_balanced(node):
     if node is None:
         return True, 0
     if node.left is None and node.right is None:
-        return True, 1
+        return True, 0
         
     balanced_l, height_l = is_balanced(node.left)
     balanced_r, height_r = is_balanced(node.right)
