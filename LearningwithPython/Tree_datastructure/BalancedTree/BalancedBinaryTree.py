@@ -26,7 +26,7 @@ def parse_tuple(data):
 def is_balanced(node):								
     if node is None:
         return True, 0
-    if node.left is None and node.right:
+    if node.left is None and node.right is None:
         return True, 1
         
     balanced_l, height_l = is_balanced(node.left)
